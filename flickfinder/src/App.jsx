@@ -1,17 +1,17 @@
-import Getpopular from "./components/Getpopular"
-
+import { Navbar , Hero } from "./components";
 
 function App() {
-
-  let data = Getpopular();
   
   return (
-    <>
-    <div className="text-3xl font-bold font-sans">
-      Hello there.
+    <div className="font-poppins" >
+      <div className=" absolute top-0 left-0">
+        <Navbar/>
+      </div>
+
+      <Hero />
+      
     </div>
-    </>
   )
 }
 
-export default App
+export default App;
