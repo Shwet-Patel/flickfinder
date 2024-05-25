@@ -1,16 +1,16 @@
-import { Navbar , Hero } from "./components";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Home , Details , Aboutus } from './pages'
 
 function App() {
   
   return (
-    <div className="font-poppins" >
-      <div className=" absolute top-0 left-0">
-        <Navbar/>
-      </div>
-
-      <Hero />
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/details/:id' element={<Details/>} />
+        <Route path='/about' element={<Aboutus/>} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

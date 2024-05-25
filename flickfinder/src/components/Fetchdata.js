@@ -22,8 +22,8 @@ const Fetchdata = (url) => {
       axios
         .request(options)
         .then((response) => {
-          console.log(response);
-          setData(response.data.results);
+          console.log(response.data);
+          setData(response.data);
           setLoading(false);
         })
         .catch((error) => {
@@ -33,7 +33,7 @@ const Fetchdata = (url) => {
     };
 
     fetchData();
-  }, []);
+  }, [url]);
 
   return { data, loading, error };
 };
