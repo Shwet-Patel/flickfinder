@@ -2,7 +2,7 @@ import {footerlinks , social} from '../Data';
 
 const Footer = () => {
     return(
-        <div id="footer" className='bg-gray-950'>
+        <div id="footer" className='bg-gray-950 text-white'>
             <div className="grid pt-12  mx-8 justify-center">
                 <div className='grid items-center justify-center'>
                     <div className='flex flex-wrap gap-x-8'>

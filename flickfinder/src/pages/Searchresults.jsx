@@ -8,13 +8,17 @@ function Searchresults() {
 
   return (
     <div className=' bg-gray-900 text-white'>
-      <Navbar/>
+      <div className="fixed top-0 left-0 w-full z-10">
+        <Navbar/>
+      </div>
+
+      <div className=' min-h-screen mt-20'>
         { loading && <div className='grid min-h-28 items-center justify-center font-semibold text-xl'>Loading your list...</div>}
         { error && <div className='grid min-h-28 items-center justify-center font-semibold text-xl'>Oops! Can't find what your are looking for</div>}
         {
             !loading && !error && 
             <div className='px-16 py-8'>
-              <h1 className='ml-4 text-3xl font-bold'>Here are your search results for "{query}"</h1>
+              <h1 className='ml-4 text-3xl font-bold text-center'>Here are your search results for "{query}"</h1>
               {/* movies */}
               <div className='mt-8'>
                 <h1 className='ml-4 text-3xl font-bold'>Movies</h1>
@@ -23,7 +27,7 @@ function Searchresults() {
                     data.results.map((item)=>{
                       if(item.media_type == 'movie')
                         {
-                          return(<Displayitem item={item}/>)
+                          return(<Displayitem type={'movie'} item={item}/>)
                         }
                     })
                   }
@@ -37,7 +41,7 @@ function Searchresults() {
                       data.results.map((item)=>{
                         if(item.media_type == 'tv')
                           {
-                            return(<Displayitem item={item}/>)
+                            return(<Displayitem type={'tv'} item={item}/>)
                           }
                       })
                     }
@@ -48,8 +52,10 @@ function Searchresults() {
               
             </div>
         }
-
+        </div>
+        
         <Footer />
+      
     </div>
   )
 }

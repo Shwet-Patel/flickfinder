@@ -2,18 +2,15 @@ import { FaFacebookF , FaInstagram , FaGithub , FaYoutube , FaTwitter , FaLinked
 import Fetchdata from "./components/Fetchdata";
 
 export const navlinks = [
-    { id: 1 , text: "HOME" , href:"#home"},
-    { id: 2 , text: "MOVIES" , href:"#movies"},
-    { id: 3 , text: "SERIES" , href:"#series"},
-    { id: 4 , text: "ABOUT US" , href:"#aboutus"},
+    { id: 1 , text: "HOME" , href:"/"},
+    { id: 2 , text: "ABOUT US" , href:"/about"},
 ];
 
 export const randomImageurls = [
     { id: 1 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/7CENyUim29IEsaJhUxIGymCRvPu.jpg"},
     { id: 2 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/2ssWTSVklAEc98frZUQhgtGHx7s.jpg"},
-    { id: 3 , url:"https://media.themoviedb.org/t/p/w1000_and_h563_face/x2IqsMlpbOhS8zIUJfyl1yO4gHF.jpg"},
-    { id: 4 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/zCjZfevPFBbOh2SAx2syIBHSqEI.jpg"},
-    { id: 5 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/dqK9Hag1054tghRQSqLSfrkvQnA.jpg"},
+    { id: 3 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/zCjZfevPFBbOh2SAx2syIBHSqEI.jpg"},
+    { id: 4 , url:"https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/dqK9Hag1054tghRQSqLSfrkvQnA.jpg"},
 ];
 
 

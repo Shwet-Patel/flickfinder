@@ -9,9 +9,9 @@ function Home() {
       </div>
 
       <Hero />
-      <Content toggle1='trending/movie/day' toggle1val='Day' toggle2='trending/movie/week' toggle2val='Week' endurl='' heading="See what's Trending" />
-      <Content toggle1='movie' toggle1val='Movies' toggle2='tv' toggle2val='Series'endurl='/popular' heading="What's Popular" />
-      <Content toggle1='movie' toggle1val='Movies' toggle2='tv' toggle2val='Series'endurl='/top_rated' heading="Top rated" />
+      <Content toggle1='trending/movie/day' toggle1val='Day' toggle2='trending/movie/week' toggle2val='Week' endurl='' heading="See what's Trending" contenttype="movie" />
+      <Content toggle1='movie' toggle1val='Movies' toggle2='tv' toggle2val='Series'endurl='/popular' heading="What's Popular" contenttype="toggleval"/>
+      <Content toggle1='movie' toggle1val='Movies' toggle2='tv' toggle2val='Series'endurl='/top_rated' heading="Top rated" contenttype="toggleval"/>
       
       <Footer />
     </div>

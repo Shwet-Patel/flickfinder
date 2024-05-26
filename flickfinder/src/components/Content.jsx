@@ -3,7 +3,7 @@ import  Fetchdata from './Fetchdata';
 import Displaylist from './Displaylist';
 
 
-function Content({toggle1 , toggle1val , toggle2, toggle2val , endurl , heading }) {
+function Content({toggle1 , toggle1val , toggle2, toggle2val , endurl , heading , contenttype }) {
     const [toggle , setToggle] = useState(toggle1);
     const url = `https://api.themoviedb.org/3/${toggle+endurl}`;
     
@@ -17,7 +17,7 @@ function Content({toggle1 , toggle1val , toggle2, toggle2val , endurl , heading 
                         <button className={`px-4 py-2 rounded-full ${toggle===toggle2 ? ('bg-gray-900 text-white '):('')} duration-300`} onClick={()=>{setToggle(toggle2)}} >{toggle2val}</button>
                     </div>
                 </div>
-                <Displaylist url={url}/>
+                <Displaylist key={toggle} type={contenttype==='movie' ? contenttype : toggle} url={url}/>
         </div>
     )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -14,20 +14,19 @@ var settings = {
 };
 
 
-function Displaylist({url}) {
+function Displaylist({type,url}) {
     const {data , loading , error} = Fetchdata(url);
-    
     return (
         <div className='py-6'>
-            { loading && <div className='grid min-h-28 items-center justify-center font-semibold text-xl'>Loading your list...</div>}
-            { error && <div className='grid min-h-28 items-center justify-center font-semibold text-xl'>Oops! Can't find what your are looking for</div>}
+            { loading && <div className='grid min-h-56 items-center justify-center font-semibold text-2xl'>Loading your list...</div>}
+            { error && <div className='grid min-h-56 items-center justify-center font-semibold text-2xl'>Oops! Can't find what your are looking for</div>}
             {
                 !loading && !error && 
                 <Slider {...settings}> 
                 {
                     data.results.map((item)=>{
                         return(
-                        <Displayitem key={item.id} item={item}/>
+                        <Displayitem key={item.id} type={type} item={item}/>
                     );})
                 }
                 </Slider>

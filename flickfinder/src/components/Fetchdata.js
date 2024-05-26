@@ -22,7 +22,6 @@ const Fetchdata = (url) => {
       axios
         .request(options)
         .then((response) => {
-          console.log(response.data);
           setData(response.data);
           setLoading(false);
         })
