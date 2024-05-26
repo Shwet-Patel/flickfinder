@@ -107,7 +107,7 @@ function Details() {
         </div>
 
         <div>
-          <h1 className=' pl-4 text-3xl font-semibold'>Similar to this</h1>
+          <h1 className='mt-8 pl-4 text-3xl font-semibold'>Similar to this</h1>
           <Displaylist url={`https://api.themoviedb.org/3/movie/${id}/similar`}/>
         </div>
 
