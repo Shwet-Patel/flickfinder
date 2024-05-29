@@ -17,7 +17,7 @@ function Searchresults() {
         { error && <div className='grid min-h-28 items-center justify-center font-semibold text-xl'>Oops! Can't find what your are looking for</div>}
         {
             !loading && !error && 
-            <div className='px-16 py-8'>
+            <div className=' px-4 lg:px-16 py-8'>
               <h1 className='ml-4 text-3xl font-bold text-center'>Here are your search results for "{query}"</h1>
               {/* movies */}
               <div className='mt-8'>

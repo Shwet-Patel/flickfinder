@@ -9,11 +9,11 @@ function Aboutus() {
       </div>
       <div>
         <div className='h-full overflow-hidden'>
-          <img className='-z-10 fixed top-0 left-0 w-full object-cover object-center' src="https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/dqK9Hag1054tghRQSqLSfrkvQnA.jpg" />
+          <img className='-z-10 mt-20 md:mt-12 fixed top-0 left-0 w-full object-cover object-center' src="https://media.themoviedb.org/t/p/w1066_and_h600_bestv2/dqK9Hag1054tghRQSqLSfrkvQnA.jpg" />
         </div>
-        <div className='mt-[80vh] bg-white px-16 py-8 text-center'>
-          <h1 className='text-5xl font-bold'>About us</h1>
-          <p className='mt-8 text-medium'>
+        <div className=' mt-[80vw]  md:mt-[80vh] bg-white px-16 py-8 text-center'>
+          <h1 className=' text-3xl lg:text-5xl font-bold'>About us</h1>
+          <p className='mt-8 font-thin lg:text-medium'>
           FlickFinder stands as an indispensable digital haven for cinephiles worldwide, 
           a virtual library that meticulously catalogs and celebrates the vast tapestry of
           cinematic gems. This website isn't merely a repository of titles; it's a sanctuary
@@ -23,7 +23,7 @@ function Aboutus() {
           serves as a compass, guiding users through the labyrinth of cinematic offerings, ensuring
           that no masterpiece goes unnoticed.
           </p>
-          <p className='mt-8 text-medium'>
+          <p className='mt-8 text-sm lg:text-medium'>
             Data on this website is provided by TMDB. you can find out more about their API  <span>
               <a className='hover:text-yellow-400 duration-200 hover:underline' href='https://developer.themoviedb.org/docs/getting-started'>here</a></span>
           </p>

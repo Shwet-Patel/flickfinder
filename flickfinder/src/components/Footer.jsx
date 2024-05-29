@@ -5,7 +5,7 @@ const Footer = () => {
         <div id="footer" className='bg-gray-950 text-white'>
             <div className="grid pt-12  mx-8 justify-center">
                 <div className='grid items-center justify-center'>
-                    <div className='flex flex-wrap gap-x-8'>
+                    <div className='flex flex-col place-items-center md:flex-row gap-x-8'>
                     {
                         footerlinks.map(({id,text,href})=>{
                             return(
@@ -17,13 +17,13 @@ const Footer = () => {
 
                 </div>
                 
-                <div className="mt-8 py-4 text-md font-thin tracking-wider text-center min-h-12 items-center">
+                <div className="mt-8 py-4 text-xs font-thin tracking-wider text-center min-h-12 items-center">
                     <h4>Copyright &copy; {new Date().getFullYear()}  Flick Finder All Rights Reserved.</h4>
                     <h4>Website developed by: Shwet Patel</h4>
                 </div>
                 
-                <div className='grid items-center justify-center'>
-                    <div className='my-8 flex flex-row gap-x-4'>
+                <div>
+                    <div className='my-8 flex flex-row items-center justify-center flex-wrap gap-4'>
                     {
                         social.map(({id,icon,href})=>{
                             return(

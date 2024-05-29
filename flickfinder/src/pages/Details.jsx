@@ -21,16 +21,16 @@ function Details() {
 
   return (
     <div  className="font-poppins bg-gray-900 text-white" >
-      < div className='px-16'>
+      < div className='px-4 lg:px-16'>
         <div className="fixed top-0 left-0 w-full z-10">
           <Navbar/>
         </div>
 
         <div className='pt-28'>
-          <div className='grid grid-cols-[35%,65%]'>
+          <div className='grid grid-rows-[35% , 65%]  lg:grid-cols-[35%,65%]'>
             <img className='bg-cover h-[30rem] justify-self-center rounded-xl shadow-md' loading='lazy' src={`https://image.tmdb.org/t/p/original${data.poster_path}`}/>
 
-            <div className='px-8'>
+            <div className=' px-8 py-8 lg:py-0'>
               <h1 className='text-4xl font-semibold tracking-wide'>{data.title || data.name}</h1>
               <h3 className=' mt-2 text-lg font-light italic text-gray-400'>{data.tagline}</h3>
 
@@ -79,7 +79,7 @@ function Details() {
               </>
               }
               
-              <div className='flex flex-row gap-x-8'>
+              <div className='flex flex-col lg:flex-row gap-4'>
                 <div>
                   <h2 className='text-lg font-semibold tracking-wide'>Status:
                   <span className='text-lg font-light text-gray-400'> {data.status}</span></h2>
@@ -113,7 +113,7 @@ function Details() {
         </div>
 
         {type==='tv' && <div className='mt-12'>
-          <h1 className='pl-4 text-3xl font-semibold'>Seasons</h1>
+          <h1 className='pl-4 text-2xl font-semibold'>Seasons</h1>
           <div>
           {
             !loading && !error &&
@@ -140,7 +140,7 @@ function Details() {
         </div>}
 
         <div className='mt-12'>
-          <h1 className='pl-4 text-3xl font-semibold'>Top Cast</h1>
+          <h1 className='pl-4 text-2xl  font-semibold'>Top Cast</h1>
           <div>
           {
             !castloading && !casterror &&
@@ -170,12 +170,12 @@ function Details() {
         </div>
 
         <div>
-          <h1 className='mt-8 pl-4 text-3xl font-semibold'>Similar to this</h1>
+          <h1 className='mt-8 pl-4 text-2xl  font-semibold'>Similar to this</h1>
           <Displaylist type={type} url={`https://api.themoviedb.org/3/${type}/${id}/similar`}/>
         </div>
 
         <div>
-          <h1 className='pt-16 pl-4 text-3xl font-semibold'>Recommendations</h1>
+          <h1 className='pt-16 pl-4 text-2xl  font-semibold'>Recommendations</h1>
           <Displaylist type={type} url={`https://api.themoviedb.org/3/${type}/${id}/recommendations`}/>
         </div>
       </div>
