@@ -16,8 +16,6 @@ function Details() {
   const director = !castloading && cast?.crew?.find((item) => (item.job === 'Director' || item.job==='Executive Producer'));
   const writer = type==='movie' ? (!castloading && cast?.crew?.find((item) => item.job === 'Screenplay')):(!loading && data?.created_by[0]);
   const trailer = !videoloading && videos?.results?.find(video => video.type === 'Trailer' && video.site === 'YouTube');
-  
-  console.log(data);
 
   return (
     <div  className="font-poppins bg-gray-900 text-white" >
@@ -37,7 +35,7 @@ function Details() {
               <div className='py-4' >
                 {
                   !loading && !error &&
-                  <div className='flex flex-row gap-x-2'>
+                  <div className='flex flex-row flex-wrap gap-2'>
                     {
                       data.genres.map(({id,name})=>{
                         return(

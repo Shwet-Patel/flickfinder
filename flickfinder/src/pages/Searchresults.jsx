@@ -27,7 +27,8 @@ function Searchresults() {
                     data.results.map((item)=>{
                       if(item.media_type == 'movie')
                         {
-                          return(<Displayitem type={'movie'} item={item}/>)
+                          // console.log(item);
+                          return(<Displayitem key={item.id} type={'movie'} item={item}/>)
                         }
                     })
                   }
@@ -41,7 +42,7 @@ function Searchresults() {
                       data.results.map((item)=>{
                         if(item.media_type == 'tv')
                           {
-                            return(<Displayitem type={'tv'} item={item}/>)
+                            return(<Displayitem key={item.id} type={'tv'} item={item}/>)
                           }
                       })
                     }

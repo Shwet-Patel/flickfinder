@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Form, useNavigate } from 'react-router-dom';
 import { GiFilmProjector } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
@@ -10,8 +10,9 @@ function Navbar() {
   const [opensearch , setOpensearch] = useState(false);
   const [searchval , setSearchval] = useState('');
 
-  const handlesearch = () => {
-    window.open(`/search/${searchval}`);
+  const handlesearch = (e) => {
+    e.preventDefault();
+    navigate(`/search/${searchval}`);
   }
   
 
@@ -43,7 +44,7 @@ function Navbar() {
 
     {/* for mobile */}
     {
-      <div className={`absolute top-0 left-0 w-full -z-20 flex flex-row md:hidden px-2 py-1 bg-white text-black justify-between transition-transform duration-200 ${opensearch ? ' translate-y-20 ' : ''}`}>
+      <form  onSubmit={handlesearch} className={`absolute top-0 left-0 w-full -z-20 flex flex-row md:hidden px-2 py-1 bg-white text-black justify-between transition-transform duration-200 ${opensearch ? ' translate-y-20 ' : ''}`}>
         <input 
           className=' ml-4 min-w-[40vw] text-md outline-none'
           type='text' 
@@ -51,8 +52,8 @@ function Navbar() {
           onChange={(e)=>{setSearchval(e.target.value)}}  
           placeholder='Search for your favourite movie or show'
           />
-        <button className='px-4 py-2 rounded-2xl bg-yellow-300 hover:bg-gray-200 duration-300' onClick={handlesearch}>Search</button>
-      </div>
+        <button type='submit'  className='px-4 py-2 rounded-2xl bg-yellow-300 hover:bg-gray-200 duration-300'>Search</button>
+      </form>
     }
     </>
   )
